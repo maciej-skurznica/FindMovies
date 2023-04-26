@@ -1,4 +1,25 @@
-export type Genre = "Comedy" | "Fantasy" | "Crime" | "Drama" | "Music" | "Adventure" | "History" | "Thriller" | "Animation" | "Family" | "Mystery" | "Biography" | "Action" | "Film-Noir" | "Romance" | "Sci-Fi" | "War" | "Western" | "Horror" | "Musical" | "Sport"
+export type Genre =
+  | "Comedy"
+  | "Fantasy"
+  | "Crime"
+  | "Drama"
+  | "Music"
+  | "Adventure"
+  | "History"
+  | "Thriller"
+  | "Animation"
+  | "Family"
+  | "Mystery"
+  | "Biography"
+  | "Action"
+  | "Film-Noir"
+  | "Romance"
+  | "Sci-Fi"
+  | "War"
+  | "Western"
+  | "Horror"
+  | "Musical"
+  | "Sport";
 
 export interface Movie {
   id: number;
@@ -9,5 +30,5 @@ export interface Movie {
   actors?: string;
   plot?: string;
   posterUrl?: string;
-  genres: string[];
+  genres: Genre[]; // changed from string[] to be more specific
 }

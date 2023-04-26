@@ -1,3 +1,7 @@
+export type FilteredObjAcc = {
+  [key: number]: Movie[];
+};
+
 export type GenerateRandomIntegerProps = {
   start: number;
   end: number;

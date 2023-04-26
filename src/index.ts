@@ -48,4 +48,9 @@ export const getFilteredMovies = ({ genres }: { genres: Genre[] }): Movie[] => {
 // I just wanted to share my view on how this user experience should be implemented.
 // The way you want the function to work is ok but it limits possible movies that are within possible user liking.
 // For example if the user choose ['Crime', 'Drama'] he would only get movies that are Crime and Drama only, but not Crime and Drama and Thriller or Crime and Drama and Music which I my opinion he should get as the results.
-// By removing the condition marked with important you can achieve this functionality.
+// By removing the condition marked with important you can achieve this functionality however the complexity will increase.
+
+// Time Complexity Analysis
+// The `getFilteredMovies` function has the following time complexities:
+// - For the original implementation: O(n*m) + O(m*log(m)) => O(n), where n is the number of movies and m is the number of genres.
+// - For the updated implementation (if the important condition is removed): O(n*m) + O(n*log(n)) => O(n*log(n)).

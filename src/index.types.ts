@@ -1,3 +1,8 @@
+export type GenerateRandomIntegerProps = {
+  start: number;
+  end: number;
+};
+
 export type Genre =
   | "Comedy"
   | "Fantasy"
@@ -30,5 +35,5 @@ export interface Movie {
   actors?: string;
   plot?: string;
   posterUrl?: string;
-  genres: Genre[]; // changed from string[] to be more specific
+  genres: String[];
 }
